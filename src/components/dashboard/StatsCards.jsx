@@ -49,7 +49,9 @@ const StatsCards = () => {
     <div className="grid grid-cols-4 gap-6">
 
       {/* ─────── Total Doctors ─────── */}
-      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-between min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.06)] flex flex-col justify-between min-h-[160px]"
+      style={{boxShadow:"10px 10px 25px rgba(0,0,0,0.06) !important"}}
+      >
         <div className="flex items-start justify-between">
           <div className="w-12 h-12 rounded-2xl  flex items-center justify-center">
             <img src={personOutlineImg} alt="" className="w-10 h-10 object-cover" />
@@ -59,7 +61,7 @@ const StatsCards = () => {
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-slate-900 text-[0.78rem] font-medium mb-1">Total Doctors</p>
+          <p className="text-slate-900 text-[0.78rem] font-bold mb-1">Total Doctors</p>
           <div className="flex items-end justify-between">
             <h3 className="text-red-500 text-[1.8rem] font-bold leading-none">500+</h3>
             <div className="flex gap-2">
@@ -71,7 +73,7 @@ const StatsCards = () => {
       </div>
 
       {/* ─────── Total Patients ─────── */}
-      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-between min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.06)] flex flex-col justify-between min-h-[160px]">
         <div className="flex items-start justify-between">
           <div className="w-12 h-12 rounded-2xl flex items-center justify-center">
             <img src={component1Img} alt="" className="w-10 h-10 object-cover" />
@@ -81,7 +83,7 @@ const StatsCards = () => {
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-slate-900 text-[0.78rem] font-medium mb-1">Total Patients</p>
+          <p className="text-slate-900 text-[0.78rem] font-bold mb-1">Total Patients</p>
           <div className="flex items-end justify-between">
             <h3 className="text-blue-500 text-[1.8rem] font-bold leading-none">800+</h3>
             <div className="flex gap-2">
@@ -93,7 +95,7 @@ const StatsCards = () => {
       </div>
 
       {/* ─────── Doctors vs Patients Line Chart ─────── */}
-      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.06)] flex flex-col min-h-[160px]">
         <div className="flex items-center gap-4 mb-4">
           <div className="flex items-center gap-1.5 cursor-default">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
@@ -125,7 +127,7 @@ const StatsCards = () => {
       </div>
 
       {/* ─────── Income vs Outcome Area Chart ─────── */}
-      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_0_25px_rgba(0,0,0,0.06)] flex flex-col min-h-[160px]">
         <div className="flex items-center gap-4 mb-4">
           <div className="flex items-center gap-1.5 cursor-default">
             <span className="w-2.5 h-2.5 rounded-full bg-indigo-600" />

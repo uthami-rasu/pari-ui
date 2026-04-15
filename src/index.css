@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=PT+Sans:wght@400;700&display=swap');
 @import "tailwindcss";
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @theme {
   --font-poppins: 'Poppins', sans-serif;
+  --font-pt-sans: 'PT Sans', sans-serif;
 }
 
 * {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1, h2, h3, h4, .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
