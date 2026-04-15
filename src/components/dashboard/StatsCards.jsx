@@ -23,11 +23,14 @@ const weekData = [
   { day: 'Fr', doctors: 45, patients: 50 },
 ];
 
-const incomeData = [
-  { v: 30 }, { v: 55 }, { v: 35 }, { v: 75 }, { v: 45 }, { v: 85 }, { v: 65 }
-];
-const outcomeData = [
-  { v: 50 }, { v: 35 }, { v: 65 }, { v: 42 }, { v: 75 }, { v: 38 }, { v: 60 }
+const chartData = [
+  { name: 'A', income: 30, outcome: 50 },
+  { name: 'B', income: 55, outcome: 35 },
+  { name: 'C', income: 35, outcome: 65 },
+  { name: 'D', income: 75, outcome: 42 },
+  { name: 'E', income: 45, outcome: 75 },
+  { name: 'F', income: 85, outcome: 38 },
+  { name: 'G', income: 65, outcome: 60 },
 ];
 
 const StatBadge = ({ up, value }) => (
@@ -135,7 +138,7 @@ const StatsCards = () => {
         </div>
         <div className="flex-1 mt-1">
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart>
+            <AreaChart data={chartData} margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
               <defs>
                 <linearGradient id="incomeGrad" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor="#4f46e5" stopOpacity={0.3} />
@@ -150,20 +153,20 @@ const StatsCards = () => {
                 contentStyle={{ border: 'none', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', fontSize: '0.75rem' }}
               />
               <Area
-                data={incomeData}
                 type="monotone"
-                dataKey="v"
+                dataKey="income"
                 stroke="#4f46e5"
                 strokeWidth={2.5}
                 fill="url(#incomeGrad)"
+                dot={false}
               />
               <Area
-                data={outcomeData}
                 type="monotone"
-                dataKey="v"
+                dataKey="outcome"
                 stroke="#f43f5e"
                 strokeWidth={2.5}
                 fill="url(#outcomeGrad)"
+                dot={false}
               />
             </AreaChart>
           </ResponsiveContainer>

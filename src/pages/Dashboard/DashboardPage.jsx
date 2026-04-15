@@ -16,11 +16,10 @@ const GreetingHeader = () => {
   const hour = new Date().getHours();
   const greeting = hour < 12 ? 'Good Morning' : hour < 17 ? 'Good Afternoon' : 'Good Evening';
   return (
-    <div>
-      <p className="text-slate-400 text-[0.78rem] font-medium mb-0.5">{greeting}</p>
-      <h2 className="text-slate-800 text-[1.3rem] font-extrabold tracking-tight leading-tight">
+    <div className="mb-2">
+      <h2 className="text-slate-800 text-[1.55rem] font-medium tracking-tight">
         {greeting}{' '}
-        <span className="text-blue-500">Dr. Sarah !</span>
+        <span className="text-blue-500 font-bold">Dr. Sarah !</span>
       </h2>
     </div>
   );
