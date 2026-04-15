@@ -55,7 +55,7 @@ const DashboardPage = () => {
           <Topbar name="Dr. Sarah Johnson" role={`${roleLabel} · Administrator`} />
 
           {/* Scrollable page content */}
-          <div className="flex-1 overflow-y-auto px-8 py-7 flex flex-col gap-8">
+          <div className="flex-1 overflow-y-auto overflow-x-hidden px-8 py-7 flex flex-col gap-8">
 
             {/* Greeting — sits ABOVE the blue banner */}
             <GreetingHeader />
