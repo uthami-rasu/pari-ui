@@ -7,6 +7,8 @@ import {
 import TrendingUpRoundedIcon   from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import NorthEastRoundedIcon    from '@mui/icons-material/NorthEastRounded';
+import ArrowDropUpIcon        from '@mui/icons-material/ArrowDropUp';
+import ArrowDropDownIcon      from '@mui/icons-material/ArrowDropDown';
 
 import personOutlineImg from '../../assets/images/person-outline.png';
 import component1Img    from '../../assets/images/Component 1.png';
@@ -29,9 +31,13 @@ const outcomeData = [
 ];
 
 const StatBadge = ({ up, value }) => (
-  <span className={`flex items-center gap-1 text-[0.72rem] font-bold ${up ? 'text-emerald-500' : 'text-rose-500'}`}>
-    {up ? <TrendingUpRoundedIcon sx={{ fontSize: 13 }} /> : <TrendingDownRoundedIcon sx={{ fontSize: 13 }} />}
-    {value}%
+  <span className={`flex items-center gap-0.5 text-[0.7rem] font-bold ${up ? 'text-green-500' : 'text-red-500'}`}>
+    {up ? (
+      <ArrowDropUpIcon sx={{ fontSize: 30, mr: -0.5, ml: -0.5 }} />
+    ) : (
+      <ArrowDropDownIcon sx={{ fontSize: 30, mr: -0.5, ml: -0.5 }} />
+    )}
+  <span className='text-black'>  {value}%</span>
   </span>
 );
 
@@ -40,19 +46,19 @@ const StatsCards = () => {
     <div className="grid grid-cols-4 gap-6">
 
       {/* ─────── Total Doctors ─────── */}
-      <div className="bg-white rounded-[1.8rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-between min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-between min-h-[160px]">
         <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-2xl bg-rose-50 flex items-center justify-center">
-            <img src={personOutlineImg} alt="" className="w-6 h-6 object-contain" />
+          <div className="w-12 h-12 rounded-2xl  flex items-center justify-center">
+            <img src={personOutlineImg} alt="" className="w-10 h-10 object-cover" />
           </div>
-          <div className="text-rose-400 flex items-center gap-0.5 text-[0.75rem] font-bold mt-1">
-            <NorthEastRoundedIcon sx={{ fontSize: 14 }} /> 80
+          <div className="text-red-500 flex items-center  gap-1 text-[1rem] font-bold mt-1">
+            <NorthEastRoundedIcon sx={{ fontSize: 20 }} />  <span className='text-black'>80</span>
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-slate-400 text-[0.78rem] font-medium mb-1">Total Doctors</p>
+          <p className="text-slate-900 text-[0.78rem] font-medium mb-1">Total Doctors</p>
           <div className="flex items-end justify-between">
-            <h3 className="text-rose-400 text-[1.8rem] font-extrabold leading-none">500+</h3>
+            <h3 className="text-red-500 text-[1.8rem] font-bold leading-none">500+</h3>
             <div className="flex gap-2">
               <StatBadge up value={95} />
               <StatBadge up={false} value={25} />
@@ -62,19 +68,19 @@ const StatsCards = () => {
       </div>
 
       {/* ─────── Total Patients ─────── */}
-      <div className="bg-white rounded-[1.8rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-between min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col justify-between min-h-[160px]">
         <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center">
-            <img src={component1Img} alt="" className="w-6 h-6 object-contain ml-0.5" />
+          <div className="w-12 h-12 rounded-2xl flex items-center justify-center">
+            <img src={component1Img} alt="" className="w-10 h-10 object-cover" />
           </div>
-          <div className="text-sky-400 flex items-center gap-0.5 text-[0.75rem] font-bold mt-1">
-            <NorthEastRoundedIcon sx={{ fontSize: 14 }} /> 80
+          <div className="text-blue-500 flex items-center gap-1 text-[1rem] font-bold mt-1">
+            <NorthEastRoundedIcon sx={{ fontSize: 20 }} /> <span className='text-black'>80</span>
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-slate-400 text-[0.78rem] font-medium mb-1">Total Patients</p>
+          <p className="text-slate-900 text-[0.78rem] font-medium mb-1">Total Patients</p>
           <div className="flex items-end justify-between">
-            <h3 className="text-sky-400 text-[1.8rem] font-extrabold leading-none">800+</h3>
+            <h3 className="text-blue-500 text-[1.8rem] font-bold leading-none">800+</h3>
             <div className="flex gap-2">
               <StatBadge up value={65} />
               <StatBadge up={false} value={25} />
@@ -84,7 +90,7 @@ const StatsCards = () => {
       </div>
 
       {/* ─────── Doctors vs Patients Line Chart ─────── */}
-      <div className="bg-white rounded-[1.8rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col min-h-[160px]">
         <div className="flex items-center gap-4 mb-4">
           <div className="flex items-center gap-1.5 cursor-default">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
@@ -116,7 +122,7 @@ const StatsCards = () => {
       </div>
 
       {/* ─────── Income vs Outcome Area Chart ─────── */}
-      <div className="bg-white rounded-[1.8rem] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col min-h-[160px]">
+      <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col min-h-[160px]">
         <div className="flex items-center gap-4 mb-4">
           <div className="flex items-center gap-1.5 cursor-default">
             <span className="w-2.5 h-2.5 rounded-full bg-indigo-600" />
