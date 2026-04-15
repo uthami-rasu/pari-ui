@@ -11,6 +11,8 @@ const WelcomeBanner = () => {
         className="relative rounded-[2rem] min-h-[290px] flex items-center overflow-visible shadow-2xl"
         style={{
           background: 'linear-gradient(135deg, #a5f3fc 0%, #38bdf8 50%, #0284c7 100%)',
+          overflowX: 'clip',
+          overflowY: 'visible'
         }}
       >
         {/* Elegant Waveform Background Overlay (SVG) */}
